@@ -20,8 +20,24 @@
 			<a href="index.html">
 				<h2 class="animated flash">
 				<i class="fa fa-hospital"></i>&nbsp;
-				Savealife.com</h2>
+				Savealife</h2>
 			</a>
+			    <div id="donate-button-container">
+      <div id="donate-button"></div>
+      <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+      <script>
+      PayPal.Donation.Button({
+      env:'production',
+      hosted_button_id:'4J7PXR6WAMBHS',
+      image: {
+      src:'https://www.paypalobjects.com/en_US/PL/i/btn/btn_donateCC_LG.gif',
+      alt:'Donate with PayPal button',
+      title:'PayPal - The safer, easier way to pay online!',
+      }
+      }).render('#donate-button');
+      </script>
+      </div>
+ 
 		</div>
 		<!-- End Brand name coding-->
 		<!-- Start Nav coding & menu coding -->
