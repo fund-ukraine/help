@@ -3,10 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta name="keywords" content="HOSPITAL,HOSPITAL.COM,HOSPITAL WEBSITE, MEDICAL">
-	<meta name="description" content=" best hospital website">
-	<meta name="author" content="st. Rotich’s Hospital">
-	<title>st. Rotich’s Hospital</title>
+	<meta name="keywords" content="HOSPITAL,HOSPITAL.COM,HOSPITAL WEBSITE, MEDICAN">
+	<meta name="description" content="Help ukraine">
+	<meta name="author" content="fundraising.com">
+	<title>hospital.com</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -20,19 +20,19 @@
 			<a href="index.html">
 				<h2 class="animated flash">
 				<i class="fa fa-hospital"></i>&nbsp;
-				st. Rotich’s Hospital</h2>
+				Savealife.com</h2>
 			</a>
 		</div>
 		<!-- End Brand name coding-->
 		<!-- Start Nav coding & menu coding -->
          <nav>
-         	<ul>
+        <!-- 	<ul>
          		<li><a href="index.html">Home</a></li>
          		<li><a href="gallery.html">Gallery</a></li>
          		<li><a href="register.html">Register</a></li>
          		<li><a href="login.html">Login</a></li>
          		<li><a href="contact.html">Contact Us</a></li>
-         	</ul>
+         	</ul> -->
          </nav>
 		<!-- End Nav coding & menu coding -->
 	</div>
@@ -43,83 +43,75 @@
 	<div class="w-80" style="padding: 0;">
 	<div class="section-img">
 		<div class="section-bg-box">
-			<h1 class="animated slideInLeft">Health Care Services</h1>
-			<h2 class="animated slideInRight">We Care About Your Health</h2>
+			<h1 class="animated slideInLeft">Save Ukraine</h1>
+			<h2 class="animated slideInRight">Save a Life</h2>
 		</div>
 	</div>
 	<!-- text decoration coding -->
-	<br/><br/>
-	<h1 class="welcome-text">WELCOME TO HOSPITAL SERVICE</h1>
-	<br/><br/>
-	<p>
-		We take care of your health so that you can live to the fullest!
-	</p>
-	<br/>
-	<p>
-		   
-	</p>
-	<br/>
-	<p>
-	 
-	</p>
-	<br/>
-	<p>
- 
-	</p>
-	<br/>
-	<p>   
-
-	</p>
-	<br/>
-	<p> 
-		
-	</p>
-	<br/>
-	<h1 class="welcome-text">OUR OUTSTANDING SERVICES</h1>
-	<br/>
-	<h2>What We Offer!</h2>
+	 <div id="smart-button-container">
+        <div style="text-align: center;">
+          <div id="paypal-button-container"></div>
+        </div>
+      </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        paypal.Buttons({
+          style: {
+            shape: 'rect',
+            color: 'gold',
+            layout: 'vertical',
+            label: 'paypal',
+            
+          },
+  
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{"amount":{"currency_code":"USD","value":1}}]
+            });
+          },
+  
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(orderData) {
+              
+              // Full available details
+              console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+  
+              // Show a success message within this page, e.g.
+              const element = document.getElementById('paypal-button-container');
+              element.innerHTML = '';
+              element.innerHTML = '<h3>Thank you for your payment!</h3>';
+  
+              // Or go to another URL:  actions.redirect('thank_you.html');
+              
+            });
+          },
+  
+          onError: function(err) {
+            console.log(err);
+          }
+        }).render('#paypal-button-container');
+      }
+      initPayPalButton();
+    </script>
+	 	 
 	
-	<ul>
-		<li>DENTAL IMPLANTS</li>
-		<li>WHITENING</li>
-		<li>VACCINATIONS</li>
-		<li>LABORATORY</li>
-		<li>MEDICAL DRESSAGE</li>
-		<li>EMERGENCY CONTRACEPTION</li>
-	</ul>
+	 
+ 
+	<h1 class="welcome-text" style="width: 25%;"></h1>
 	<br/>
-	<h2>Our Department</h2>
-
-	<ul>
-		<li>DENTAL CARE</li>
-		<li>OTOLOGY</li>
-		<li>CARDIAC</li>
-		<li>HEPATOLOGY</li>
-		<li>ORTHOPEDICS</li>
-		<li>ORTHOPEDICS</li>
-		<li>OUTPATIENT</li>
-		<li>MENTAL HEALTH</li>
-	</ul>
-	<br/>
-	<h1 class="welcome-text" style="width: 25%;">about us</h1>
-	<br/>
-	<h2>Best Medical & Health care Needs to Our Patients</h2>
+	<h2></h2>
 	<div class="about-box">
+        https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info@gmg.cm&lc=US&item_name=Donation+to+YOUR+NONPROFIT+NAME&no_note=0&cn=&currency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted
 		<div>
 			<p>
-				THE VISION OF st Rotich’s hospital
-				 
-			</p>  
+			 		</p>
 			<br/>
 			<p>
-				
-				St Rotich’s Hospital was built in response to health needs of people living in Europe. We created a place in which experts from various fields of medicine, equipped with cutting-edge technology, can make full use of their knowledge and skills for the good of our patients.
-				
-				
-			</p>
+			 			</p>
 		</div>
 		<div>
-			<img src="images/5.jpg" width="100%">
+			<img src="image/11.jpeg" width="100%">
 		</div>
 	</div>
     </div>
@@ -129,36 +121,36 @@
 <footer>
 	<div class="w-80">
 		<div class="footer-box">
- 		<h2>Services</h2>
- 		<a href="#">HEPATOLOGY</a>
- 		<a href="#">MEDICAL DRESSAGE</a>
- 		<a href="#">LABORATORY</a>
- 		<a href="#">VACCINATIONS</a>
- 		<a href="#">WHITENING</a>
+ 		<h2> </h2>
+ 		<a href="#"></a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
  	</div>
  	<div class="footer-box">
- 		<h2>About Us</h2>
- 		<a href="#">Company Overview</a>
- 		<a href="#">Management</a>
- 		<a href="#">Initiatives</a>
- 		<a href="#">Carrers</a>
- 		<a href="#">Our Doctors Achieve</a>
+ 		<h2> </h2>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
  	</div>
  	<div class="footer-box">
- 		<h2>Contact Us</h2>
- 		<a href="#">Post a Query</a>
- 		<a href="#">Apollo Clinics</a>
- 		<a href="#">Reach Hospitals</a>
- 		<a href="#">Apollo Cradle</a>
- 		<a href="#">Ask Question</a>
+ 		<h2> </h2>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
  	</div>
  	<div class="footer-box">
- 		<h2>Facilities</h2>
- 		<a href="#">HEPATOLOGY</a>
- 		<a href="#">MEDICAL DRESSAGE</a>
- 		<a href="#">LABORATORY</a>
- 		<a href="#">VACCINATIONS</a>
- 		<a href="#">WHITENING</a>
+ 		<h2></h2>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
+ 		<a href="#"> </a>
  	</div>
 	</div>
 </footer>
